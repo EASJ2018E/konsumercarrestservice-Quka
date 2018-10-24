@@ -1,15 +1,9 @@
-$fontColor: #0091aa;
-$colorHeading: #be4a14;
-#content  // div with id: content
-{
-    color: $fontColor;
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-h2
-{
-    color: $colorHeading;
-}
 
-h1{
-    @extend h2;
+.car {
+    background: #f0f0f0;
+    width: auto;
 }
