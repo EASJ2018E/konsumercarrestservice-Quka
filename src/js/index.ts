@@ -1,12 +1,18 @@
-interface Person {
-    firstName: string;
-    lastName: string;
+import axios, {AxiosResponse, AxiosError} from "../../node_modules/axios/index";
+
+interface ICar {
+    model: string;
+    vendor: string;
+    price: number;
 }
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
+axios.get('http://rest-pele-easj-dk.azurewebsites.net/api/Cars')
+.then(function (response) {
+    let data = console.log(response.data);
+})
+.catch(function (error) {
+    console.log(error);
+});   
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+
+// http://rest-pele-easj-dk.azurewebsites.net/api/Cars
